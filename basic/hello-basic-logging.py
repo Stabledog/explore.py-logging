@@ -4,7 +4,7 @@ import os
 import logging
 
 
-app_name = __name__
+app_name = os.path.splitext(os.path.basename(__file__))[0]
 logfile=f"{os.environ.get('TMPDIR','/tmp')}/{app_name}.log"
 logging.basicConfig(filename=logfile,level=logging.DEBUG)
 
